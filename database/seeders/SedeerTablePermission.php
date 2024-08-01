@@ -3,9 +3,11 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
+
+//spartie
 use Spatie\Permission\Models\Permission;
 
-class TablaPermissionSeeder extends Seeder
+class SedeerTablePermission extends Seeder
 {
     /**
      * Run the database seeds.
@@ -14,25 +16,22 @@ class TablaPermissionSeeder extends Seeder
      */
     public function run()
     {
-
-        $permisos=[
-            //operaciones sobre tabla role
+        $permisos = [
+            //tabla roles
             'ver-rol',
             'crear-rol',
             'editar-rol',
             'eliminar-rol',
 
-             //operaciones sobre tabla role
+            //tabla blog
             'ver-blog',
             'crear-blog',
             'editar-blog',
             'eliminar-blog',
-        ];
 
+        ];
         foreach ($permisos as $permiso) {
-            Permission::create([
-                'name' => $permiso
-            ]);
+            Permission::create(['name' => $permiso]);
         }
     }
 }

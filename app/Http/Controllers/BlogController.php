@@ -2,10 +2,18 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Blog;
 use Illuminate\Http\Request;
 
 class BlogController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('permissions::ver-blog | crear-blog | editar-blog | eliminar-blog')->only('index');
+        $this->middleware('permissions::crear-blog', ['only'=>['create', 'store']]);
+        $this->middleware('permissions::editar-blog', ['only'=>['edit', 'update']]);
+        $this->middleware('permissions::eliminar-blog', ['only'=>['destroy']]);
+    }
     /**
      * Display a listing of the resource.
      *
@@ -13,7 +21,8 @@ class BlogController extends Controller
      */
     public function index()
     {
-        //
+        $blogs = Blog::paginate(5);
+        return view('blogs.index', compact('blogs'));
     }
 
     /**
@@ -23,7 +32,7 @@ class BlogController extends Controller
      */
     public function create()
     {
-        //
+        return view('blogs.create');
     }
 
     /**
@@ -34,7 +43,12 @@ class BlogController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request()->validate([
+            'titulo' => 'required',
+            'contenido' => 'required',
+        ]);
+        Blog::create($request->all());
+        return redirect()->route('blos.index');
     }
 
     /**
@@ -54,9 +68,9 @@ class BlogController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Blog $blog)
     {
-        //
+        return view('blogs.edit', compact('blog'));
     }
 
     /**
@@ -66,9 +80,14 @@ class BlogController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Blog $blog)
     {
-        //
+        $request()->validate([
+            'titulo' => 'required',
+            'contenido' => 'required',
+        ]);
+        $blog->update($request->all());
+        return redirect()->route('blogs.index');
     }
 
     /**
@@ -77,8 +96,9 @@ class BlogController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Blog $blog)
     {
-        //
+        $blog->delete();
+        return redirect()->route('blogs.index');
     }
 }
