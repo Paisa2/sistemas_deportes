@@ -22,7 +22,7 @@
                             </div>
                             @endif
 
-                            {!! Form::model($user, ['method'=>'PUT', 'route' => ['$usuarios.update', $user->id]]) !!}
+                            {!! Form::model($user, ['method'=>'PUT', 'route' => ['usuarios.update', $user->id]]) !!}
                                 <div class="row">
                                     <div class="col-xs-12 col-sm-12 col-md-12">
                                         <div class="form-group">
@@ -31,31 +31,31 @@
                                         </div>
                                     </div>
 
-                                    <div class="col-xs-12 col-sm-12 col-md-12">
+                                    <!-- <div class="col-xs-12 col-sm-12 col-md-12">
                                         <div class="form-group">
                                             <label for="name">Apellido</label>
                                             {!! Form::text('apellido', null, array('class'=>'form-control')) !!}
                                         </div>
-                                    </div>
+                                    </div> -->
 
                                     <div class="col-xs-12 col-sm-12 col-md-12">
                                         <div class="form-group">
-                                            <label for="name">Correo</label>
+                                            <label for="email">Correo</label>
                                             {!! Form::text('email', null, array('class'=>'form-control')) !!}
                                         </div>
                                     </div>
 
                                     <div class="col-xs-12 col-sm-12 col-md-12">
                                         <div class="form-group">
-                                            <label for="name">Contraseña</label>
-                                            {!! Form::text('password', null, array('class'=>'form-control')) !!}
+                                            <label for="password">Contraseña</label>
+                                            {!! Form::password('password', array('class'=>'form-control')) !!}
                                         </div>
                                     </div>
 
                                     <div class="col-xs-12 col-sm-12 col-md-12">
                                         <div class="form-group">
-                                            <label for="name">Confirmar Contraseña</label>
-                                            {!! Form::text('confirm-password', null, array('class'=>'form-control')) !!}
+                                            <label for="password">Confirmar Contraseña</label>
+                                            {!! Form::password('confirm-password', array('class'=>'form-control')) !!}
                                         </div>
                                     </div>
 

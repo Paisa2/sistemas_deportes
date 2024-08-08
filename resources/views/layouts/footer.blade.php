@@ -1,3 +1,3 @@
 <div class="footer-left">
-    All rights reserved &copy; {{ date('Y') }}
+    <span>Copyright &copy; Municipio Colcapirhua {{ now()->year }}</span>
 </div>

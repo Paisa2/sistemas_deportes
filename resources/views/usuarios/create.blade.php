@@ -31,19 +31,19 @@
                                         </div>
                                     </div>
 
-                                    <div class="col-xs-12 col-sm-12 col-md-12">
+                                    <!-- <div class="col-xs-12 col-sm-12 col-md-12">
                                         <div class="form-group">
                                             <label for="name">Apellido</label>
                                             {!! Form::text('apellido', null, array('class'=>'form-control')) !!}
                                         </div>
-                                    </div>
+                                    </div> -->
 
-                                    <div class="col-xs-12 col-sm-12 col-md-12">
+                                    <!-- <div class="col-xs-12 col-sm-12 col-md-12">
                                         <div class="form-group">
                                             <label for="ci">CI</label>
                                             {!! Form::text('ci', null, array('class'=>'form-control')) !!}
                                         </div>
-                                    </div>
+                                    </div> -->
 
                                     <div class="col-xs-12 col-sm-12 col-md-12">
                                         <div class="form-group">
