@@ -15,6 +15,9 @@
                             @foreach ($errors->all() as $error)
                                 <li>{{ $error }}</li>
                             @endforeach
+                            <!-- @error('message')
+                                <p class="alert alert-danger ">{{$message}}</p>
+                            @enderror -->
                         </ul>
                     </div>
                 @endif
