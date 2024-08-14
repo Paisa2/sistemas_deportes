@@ -29,6 +29,18 @@ class SedeerTablePermission extends Seeder
             'editar-blog',
             'eliminar-blog',
 
+            //tabla alumno
+            'ver-alumno',
+            'crear-alumno',
+            'editar-alumno',
+            'eliminar-alumno',
+
+            //tabla profesor
+            'ver-profesor',
+            'crear-profesor',
+            'editar-profesor',
+            'eliminar-profesor',
+
         ];
         foreach ($permisos as $permiso) {
             Permission::create(['name' => $permiso]);

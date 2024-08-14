@@ -2,18 +2,17 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Profesor;
 use Illuminate\Http\Request;
 
-use App\Models\Blog;
-
-class BlogController extends Controller
+class ProfesorController extends Controller
 {
     function __construct()
     {
-        $this->middleware('permission:ver-blog|crear-blog|editar-blog|eliminar-blog')->only('index');
-        $this->middleware('permission:crear-blog', ['only' => ['create','store']]);
-        $this->middleware('permission:editar-blog', ['only' => ['edit','update']]);
-        $this->middleware('permission:eliminar-blog', ['only' => ['destroy']]);
+        $this->middleware('permission:ver-profesor|crear-profesor|editar-profesor|eliminar-profesor')->only('index');
+        $this->middleware('permission:crear-profesor', ['only' => ['create','store']]);
+        $this->middleware('permission:editar-profesor', ['only' => ['edit','update']]);
+        $this->middleware('permission:eliminar-profesor', ['only' => ['destroy']]);
     }
     /**
      * Display a listing of the resource.
@@ -22,10 +21,8 @@ class BlogController extends Controller
      */
     public function index()
     {
-         //Con paginación
-        $blogs = Blog::paginate(5);
-        return view('blogs.index',compact('blogs'));
-         //al usar esta paginacion, recordar poner en el el index.blade.php este codigo  {!! $blogs->links() !!}
+        $profesores = Profesor::paginate(5);
+        return view('profesores.index', compact('profesores'));
     }
 
     /**
@@ -35,7 +32,7 @@ class BlogController extends Controller
      */
     public function create()
     {
-        return view('blogs.crear');
+        return view('profesores.crear');
     }
 
     /**
@@ -47,13 +44,14 @@ class BlogController extends Controller
     public function store(Request $request)
     {
         request()->validate([
-            'titulo' => 'required',
-            'contenido' => 'required',
+            'nombre' => 'required',
+            'apellido' => 'required',
+            'ci' => 'required',
         ]);
 
-        Blog::create($request->all());
+        Profesor::create($request->all());
 
-        return redirect()->route('blogs.index');
+        return redirect()->route('profesores.index');
     }
 
     /**
@@ -73,9 +71,9 @@ class BlogController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Blog $blog)
+    public function edit(Profesor $profesor)
     {
-        return view('blogs.editar',compact('blog'));
+        return view('profesores.edita', compact('profesor'));
     }
 
     /**
@@ -85,16 +83,17 @@ class BlogController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Blog $blog)
+    public function update(Request $request, Profesor $profesor)
     {
         request()->validate([
-            'titulo' => 'required',
-            'contenido' => 'required',
+            'nombre' => 'required',
+            'apellidoo' => 'required',
+            'ci' => 'required',
         ]);
 
-        $blog->update($request->all());
+        $profesor->update($request->all());
 
-        return redirect()->route('blogs.index');
+        return redirect()->route('profesores.index');
     }
 
     /**
@@ -103,10 +102,10 @@ class BlogController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Blog $blog)
+    public function destroy(Profesor $profesor)
     {
-        $blog->delete();
+        $profesor->delete();
 
-        return redirect()->route('blogs.index');
+        return redirect()->route('profesores.index');
     }
 }
