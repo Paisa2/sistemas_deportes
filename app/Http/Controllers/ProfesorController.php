@@ -73,7 +73,7 @@ class ProfesorController extends Controller
      */
     public function edit(Profesor $profesor)
     {
-        return view('profesores.edita', compact('profesor'));
+        return view('profesores.editar', compact('profesor'));
     }
 
     /**

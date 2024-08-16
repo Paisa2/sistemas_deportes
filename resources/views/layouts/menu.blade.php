@@ -22,6 +22,11 @@
     <a class="nav-link" href="/profesores">
         <i class="fas fa-chalkboard-teacher"></i><span> Profesores</span>
     </a>
+
+    <a class="nav-link" href="/materias">
+        <i class="fas fa-book-reader"></i><span> Materias</span>
+    </a>
+
     <a class="nav-link" href="/cursos">
         <i class="fas fa-store-alt"></i><span> Cursos</span>
     </a>

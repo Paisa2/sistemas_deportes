@@ -41,6 +41,7 @@ class SedeerTablePermission extends Seeder
             'editar-profesor',
             'eliminar-profesor',
 
+
         ];
         foreach ($permisos as $permiso) {
             Permission::create(['name' => $permiso]);
