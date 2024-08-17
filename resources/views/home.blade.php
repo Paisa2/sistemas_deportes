@@ -73,11 +73,11 @@
                                             <div class="card-block">
                                                 <h5>Entrenadores</h5>
                                                 @php
-                                                use App\Models\Profesor;
-                                                $cant_profesores = Profesor::count();
+                                                use App\Models\Entrenador;
+                                                $cant_entrenadores = Entrenador::count();
                                                 @endphp
-                                                <h2 class="text-right"><i class="fas fa-chalkboard-teacher f-left"></i><span>{{$cant_profesores}}</span></h2>
-                                                <p class="m-b-0 text-right"><a href="/profesores" class="text-white">Ver más</a></p>
+                                                <h2 class="text-right"><i class="fas fa-chalkboard-teacher f-left"></i><span>{{$cant_entrenadores}}</span></h2>
+                                                <p class="m-b-0 text-right"><a href="/entrenadores" class="text-white">Ver más</a></p>
                                             </div>
                                         </div>
                                     </div>

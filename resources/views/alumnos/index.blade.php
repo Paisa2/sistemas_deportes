@@ -21,7 +21,6 @@
                                     <th style="display: none;">ID</th>
                                     <th style="color:#fff;">Nombre</th>
                                     <th style="color:#fff;">Apellido</th>
-                                    <th style="color:#fff;">Matricula</th>
                                     <th style="color:#fff;">CI</th>
                                     <th style="color:#fff;">Edad</th>
                                     <th style="color:#fff;">Acciones</th>
@@ -32,7 +31,6 @@
                                 <td style="display: none;">{{ $alumno->id }}</td>
                                 <td>{{ $alumno->nombre }}</td>
                                 <td>{{ $alumno->apellido }}</td>
-                                <td>{{ $alumno->matricula }}</td>
                                 <td>{{ $alumno->ci }}</td>
                                 <td>{{ $alumno->edad }}</td>
                                 <td>

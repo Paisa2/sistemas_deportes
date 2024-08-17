@@ -23,7 +23,7 @@
                             </div>
                         @endif
 
-                    <form action="{{ route('profesores.store') }}" method="POST">
+                    <form action="{{ route('entrenadores.store') }}" method="POST">
                         @csrf
                         <div class="row">
                             <div class="col-xs-12 col-sm-12 col-md-12">
@@ -44,6 +44,24 @@
                                 <div class="form-group">
                                     <label for="ci">Canet Identidad</label>
                                     <input type="text" name="ci" class="form-control">
+                                </div>
+                            </div>
+
+                            <div class="col-xs-12 col-sm-12 col-md-12">
+                                <div class="form-group">
+                                    <label for="sexo">Sexo</label>
+                                    <select name="sexo" id="sexo" class="form-control" >
+                                        <option value="">--Selecciona el Sexo--</option>
+                                        <option value="Masculino" @if(old('masculino')=='Masculino' ) selected @endif>Masculino</option>
+                                        <option value="Femenino" @if(old('femenino')=='Femenino' ) selected @endif>Femenino</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="col-xs-12 col-sm-12 col-md-12">
+                                <div class="form-group">
+                                    <label for="image">Archivo CV</label>
+                                    <input type="file" accept="application/pdf,application/msword" name="image" class="form-control" placeholder="Subir Archivos" value="{{ old('image') }}" autofocus minlength="1" maxlength="50">
                                 </div>
                             </div>
 

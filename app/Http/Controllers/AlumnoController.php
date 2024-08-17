@@ -47,10 +47,8 @@ class AlumnoController extends Controller
         request()->validate([
             'nombre' => 'required',
             'apellido' => 'required',
-            'matricula' => 'required',
             'ci' => 'required',
             'edad' => 'required',
-            'estadoInscripcion',
         ]);
 
         Alumno::create($request->all());
@@ -92,10 +90,8 @@ class AlumnoController extends Controller
         request()->validate([
             'nombre' => 'required',
             'apellido' => 'required',
-            'matricula' => 'required',
             'ci' => 'required',
             'edad' => 'required',
-            'estadoInscripcion',
         ]);
 
         $alumno->update($request->all());

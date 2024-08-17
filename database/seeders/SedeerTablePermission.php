@@ -35,11 +35,11 @@ class SedeerTablePermission extends Seeder
             'editar-alumno',
             'eliminar-alumno',
 
-            //tabla profesor
-            'ver-profesor',
-            'crear-profesor',
-            'editar-profesor',
-            'eliminar-profesor',
+            //tabla entrenador
+            'ver-entrenador',
+            'crear-entrenador',
+            'editar-entrenador',
+            'eliminar-entrenador',
 
 
         ];

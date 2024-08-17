@@ -5,11 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Profesor extends Model
+class Entrenador extends Model
 {
     use HasFactory;
-    protected  $table = 'profesores';
-    protected $fillable = ['nombre', 'apellido', 'ci', 'materia_id'];
+    protected  $table = 'entrenadores';
+    protected $fillable = ['nombre', 'apellido', 'ci', 'sexo', 'materia_id'];
 
     public function docmaterias()
     {

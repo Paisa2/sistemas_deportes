@@ -19,8 +19,8 @@
         <i class="fas fa-user-friends"></i><span> Alunnos</span>
     </a>
 
-    <a class="nav-link" href="/profesores">
-        <i class="fas fa-chalkboard-teacher"></i><span> Profesores</span>
+    <a class="nav-link" href="/entrenadores">
+        <i class="fas fa-chalkboard-teacher"></i><span> Entrenador</span>
     </a>
 
     <a class="nav-link" href="/materias">
