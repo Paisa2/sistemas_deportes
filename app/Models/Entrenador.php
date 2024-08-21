@@ -9,7 +9,7 @@ class Entrenador extends Model
 {
     use HasFactory;
     protected  $table = 'entrenadores';
-    protected $fillable = ['nombre', 'apellido', 'ci', 'sexo', 'materia_id'];
+    protected $fillable = ['nombre', 'apellido', 'ci', 'sexo', 'image'];
 
     public function docmaterias()
     {

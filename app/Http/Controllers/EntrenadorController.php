@@ -14,6 +14,7 @@ class EntrenadorController extends Controller
         $this->middleware('permission:crear-entrenador', ['only' => ['create','store']]);
         $this->middleware('permission:editar-entrenador', ['only' => ['edit','update']]);
         $this->middleware('permission:eliminar-entrenador', ['only' => ['destroy']]);
+
     }
     /**
      * Display a listing of the resource.
