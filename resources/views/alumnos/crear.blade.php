@@ -42,13 +42,6 @@
 
                             <div class="col-xs-12 col-sm-12 col-md-12">
                                 <div class="form-group">
-                                    <label for="matricula">Matricula</label>
-                                    <input type="text" name="matricula" class="form-control">
-                                </div>
-                            </div>
-
-                            <div class="col-xs-12 col-sm-12 col-md-12">
-                                <div class="form-group">
                                     <label for="ci">Canet Identidad</label>
                                     <input type="text" name="ci" class="form-control">
                                 </div>

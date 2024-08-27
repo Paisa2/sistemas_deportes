@@ -30,19 +30,34 @@
                         <div class="row">
                             <div class="col-xs-12 col-sm-12 col-md-12">
                                 <div class="form-group">
-                                    <label for="titulo">Título</label>
-                                    <input type="text" name="titulo" class="form-control" value="{{ $blog->titulo }}">
+                                    <label for="nombre">Nombre</label>
+                                    <input type="text" name="nombre" class="form-control" value="{{ $alumno->nombre }}">
                                 </div>
                             </div>
+
                             <div class="col-xs-12 col-sm-12 col-md-12">
-
-                                <div class="form-floating">
-                                <label for="contenido">Contenido</label>
-                                <textarea class="form-control" name="contenido" style="height: 100px">{{ $blog->contenido }}</textarea>
-
+                                <div class="form-group">
+                                    <label for="apellido">Apellidos</label>
+                                    <input type="text" name="apellido" class="form-control" value="{{ $alumno->apellido }}">
                                 </div>
-                            <br>
-                            <button type="submit" class="btn btn-primary">Guardar</button>
+                            </div>
+
+                            <div class="col-xs-12 col-sm-12 col-md-12">
+                                <div class="form-group">
+                                    <label for="ci">Carnet Identidad</label>
+                                    <input type="text" name="ci" class="form-control" value="{{ $alumno->ci }}">
+                                </div>
+                            </div>
+
+                            <div class="col-xs-12 col-sm-12 col-md-12">
+                                <div class="form-group">
+                                    <label for="edad">Edad Alumno</label>
+                                    <input type="text" name="edad" class="form-control" value="{{ $alumno->edad }}">
+                                </div>
+                            </div>
+
+
+                            <button type="submit" class="btn btn-primary">Actualizar</button>
                         </div>
                     </form>
 
