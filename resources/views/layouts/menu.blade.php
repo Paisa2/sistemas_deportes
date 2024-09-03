@@ -23,11 +23,11 @@
         <i class="fas fa-chalkboard-teacher"></i><span> Entrenador</span>
     </a>
 
-    <a class="nav-link" href="/materias">
-        <i class="fas fa-book-reader"></i><span> Materias</span>
+    <a class="nav-link" href="/disiplinas">
+        <i class="fas fa-walking"></i><span> Disiplina</span>
     </a>
 
-    <a class="nav-link" href="/cursos">
-        <i class="fas fa-store-alt"></i><span> Cursos</span>
+    <a class="nav-link" href="/categorias">
+        <i class="fas fa-store-alt"></i><span> Categoria</span>
     </a>
 </li>

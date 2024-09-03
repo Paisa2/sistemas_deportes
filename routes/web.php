@@ -8,8 +8,11 @@ use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\RolController;
 use App\Http\Controllers\AlumnoController;
+use App\Http\Controllers\CategoriaController;
+use App\Http\Controllers\DisiplinaController;
 use App\Http\Controllers\EntrenadorController;
 use App\Http\Controllers\ProfesorController;
+use App\Models\Disiplina;
 
 /*
 |--------------------------------------------------------------------------
@@ -38,4 +41,6 @@ Route::group(['middleware' => ['auth']], function(){
     Route::resource('blogs', BlogController::class);
     Route::resource('alumnos', AlumnoController::class);
     Route::resource('entrenadores', EntrenadorController::class);
+    Route::resource('disiplinas', DisiplinaController::class);
+    Route::resource('categorias', CategoriaController::class);
 });
